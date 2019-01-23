@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="utf-8">
+	<title>Direto dos Trens - API</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@3/swagger-ui.css">
+	<style type="text/css">
+	html {
+		box-sizing: border-box;
+		overflow: -moz-scrollbars-vertical;
+		overflow-y: scroll;
+	}
+
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+	}
+
+	body {
+		margin: 0;
+		background: #fafafa;
+	}
+
+	</style>
+</head>
+
+<body>
+	<div id="swagger-ui"></div>
+	<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@3/swagger-ui-bundle.js"> </script>
+	<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@3/swagger-ui-standalone-preset.js"> </script>
+	<script type="application/javascript">
+	window.onload = function() {
+		const ui = SwaggerUIBundle({
+			url: "./api.json",
+			dom_id: "#swagger-ui",
+			deepLinking: true,
+			presets: [
+				SwaggerUIBundle.presets.apis,
+				SwaggerUIStandalonePreset
+			],
+			plugins: [
+				SwaggerUIBundle.plugins.DownloadUrl
+			],
+			layout: "StandaloneLayout"
+		});
+		window.ui = ui;
+	}
+
+	</script>
+</body>
+
+</html>
